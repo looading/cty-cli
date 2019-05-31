@@ -1,6 +1,6 @@
 {
   "name": "cty-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple gadget",
   "main": "dist/index.js",
   "bin": {
@@ -8,7 +8,7 @@
     "cty-cli": "dist/main.js"
   },
   "scripts": {
-    "start": "tsc -w",
+    "start": "rm -rf dist && tsc -w",
     "prepublish": "rm -rf dist && tsc"
   },
   "keywords": [
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
+    "clipboardy": "^2.0.0",
     "dayjs": "^1.8.14",
     "du": "^0.1.0",
     "pretty-bytes": "^5.2.0",

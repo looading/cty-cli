@@ -1,8 +1,8 @@
 import chalk from "chalk"
 import dayjs from "dayjs"
 import os from "os"
-import rmrf = require("rmrf");
-import trash = require("trash");
+import rmrf from "rmrf";
+import trash from "trash";
 
 /**
  * 获取时间
