@@ -17,6 +17,7 @@
     "simple-gadge",
     "cty"
   ],
+  "repository": "https://github.com/looading/cty-cli.git",
   "author": "qisang",
   "license": "ISC",
   "devDependencies": {
