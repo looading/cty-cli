@@ -41,7 +41,7 @@ export default async function clean(dir, directory = "node_modules", force = fal
     if (!fs.existsSync(path.resolve(dir, child))) { return size; }
     const stat = fs.lstatSync(path.resolve(dir, child));
     if (stat.isDirectory() && (!stat.isSymbolicLink())) {
-      size += await clean(path.resolve(dir, child), directory);
+      size += await clean(path.resolve(dir, child), directory, force);
     }
   }
   return size;

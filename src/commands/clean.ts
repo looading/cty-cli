@@ -29,7 +29,6 @@ interface IArgv {
 
 export const handler = async (argv: Arguments<IArgv>) => {
   const { force, directroy } = argv
-  console.log(directroy)
   const total = await clean(process.cwd(), directroy, force)
   console.log(chalk`{cyanBright \nFree space: ${pretty(total, { signed: true })}}`)
 }
