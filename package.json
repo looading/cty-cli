@@ -1,6 +1,6 @@
 {
   "name": "cty-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple gadget",
   "main": "dist/index.js",
   "bin": {
@@ -21,6 +21,7 @@
   "author": "qisang",
   "license": "ISC",
   "devDependencies": {
+    "@types/http-server": "^0.10.0",
     "@types/node": "^12.0.4",
     "@types/yargs": "^13.0.0",
     "tslint": "^5.17.0",
@@ -31,6 +32,7 @@
     "clipboardy": "^2.0.0",
     "dayjs": "^1.8.14",
     "du": "^0.1.0",
+    "http-server": "^0.12.3",
     "pretty-bytes": "^5.2.0",
     "rmrf": "^2.0.0",
     "trash": "^6.0.0",
