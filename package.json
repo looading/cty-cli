@@ -1,6 +1,6 @@
 {
   "name": "cty-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple gadget",
   "main": "dist/index.js",
   "bin": {
