@@ -1,5 +1,6 @@
 import chalk from "chalk"
 import dayjs from "dayjs"
+import fs from "fs";
 import os from "os"
 import rmrf from "rmrf";
 import trash from "trash";
@@ -33,7 +34,15 @@ export function isMacOS() {
 export async function removeFile(file: string, force = false) {
   let remove: any = async (file) => trash([file])
   if (force) {
-    remove = rmrf
+    const stat = fs.statSync(file)
+    if(stat.isDirectory()) {
+      remove = rmrf
+    } else {
+      remove = (file: string) => {
+        fs.unlinkSync(file)
+      }
+    }
+
   }
   await remove(file)
 }
