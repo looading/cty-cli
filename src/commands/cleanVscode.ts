@@ -12,7 +12,7 @@ export const aliases = "cleanvs"
 export const builder = {
   force: {
     default: false,
-    boplean: true,
+    boolean: true,
     desc: "remove files forever",
     alias: "f",
   },
