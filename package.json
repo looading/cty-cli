@@ -1,6 +1,6 @@
 {
   "name": "@nannanbug/cty-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple gadget",
   "main": "dist/index.js",
   "bin": {
