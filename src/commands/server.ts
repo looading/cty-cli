@@ -1,8 +1,8 @@
 import { createServer } from 'http-server'
 
-export const command = "server"
+export const command = 'server'
 
-export const desc = "http server"
+export const desc = 'http server'
 
 interface IArgument {
   root: string
@@ -14,18 +14,18 @@ export const builder = {
   root: {
     default: process.cwd(),
     boolean: true,
-    desc: "root directory",
+    desc: 'root directory',
   },
   port: {
     default: 8080,
     boolean: true,
-    desc: "port",
+    desc: 'port',
     alias: 'p'
   },
   cors: {
     default: true,
     boolean: true,
-    desc: "cors",
+    desc: 'cors',
   }
 }
 export const handler = (args: IArgument) => {

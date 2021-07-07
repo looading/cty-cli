@@ -1,13 +1,14 @@
-import chalk from "chalk";
-import { removeFile } from "../utils";
+/* eslint-disable no-useless-escape */
+import chalk from 'chalk'
+import { removeFile } from '../utils'
 
 const fileList = [
-  "~/Library/Preferences/com.microsoft.VSCode.helper.plist",
-  "~/Library/Preferences/com.microsoft.VSCode.plist",
-  "~/Library/Caches/com.microsoft.VSCode",
-  "~/Library/Application\ Support/Code/",
-  "~/Library/Saved\ Application\ State/com.microsoft.VSCode.savedState/",
-  "~/.vscode/",
+  '~/Library/Preferences/com.microsoft.VSCode.helper.plist',
+  '~/Library/Preferences/com.microsoft.VSCode.plist',
+  '~/Library/Caches/com.microsoft.VSCode',
+  '~/Library/Application\ Support/Code/',
+  '~/Library/Saved\ Application\ State/com.microsoft.VSCode.savedState/',
+  '~/.vscode/',
 ]
 
 export default async function cleanVscodeOnMacOS(force = false) {

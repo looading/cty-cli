@@ -1,24 +1,24 @@
-import chalk from "chalk"
-import pretty from "pretty-bytes"
-import { Arguments, Argv } from "yargs";
-import clean from "../lib/clean";
+import chalk from 'chalk'
+import pretty from 'pretty-bytes'
+import { Arguments, Argv } from 'yargs'
+import clean from '../lib/clean'
 
-export const command = "clean"
+export const command = 'clean'
 
-export const desc = ""
+export const desc = ''
 
 export const builder = (yargs: Argv) => yargs.options({
   force: {
-    desc: "Delete the Directory instead of putting them in the trash",
+    desc: 'Delete the Directory instead of putting them in the trash',
     boolean: true,
     default: false,
-    alias: "f",
+    alias: 'f',
   },
   directroy: {
-    desc: "The Directory which should be deleted",
+    desc: 'The Directory which should be deleted',
     string: true,
-    default: "node_modules",
-    alias: "d",
+    default: 'node_modules',
+    alias: 'd',
   },
 })
 

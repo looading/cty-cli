@@ -1,20 +1,20 @@
-import chalk from "chalk";
-import { Arguments } from "yargs"
-import cleanVscodeOnMacOS from "../lib/cleanVscode";
-import { isMacOS } from "../utils";
+import chalk from 'chalk'
+import { Arguments } from 'yargs'
+import cleanVscodeOnMacOS from '../lib/cleanVscode'
+import { isMacOS } from '../utils'
 
-export const command = "cleanvscode"
+export const command = 'cleanvscode'
 
-export const desc = "cleanup vscode on MacOS"
+export const desc = 'cleanup vscode on MacOS'
 
-export const aliases = "cleanvs"
+export const aliases = 'cleanvs'
 
 export const builder = {
   force: {
     default: false,
     boolean: true,
-    desc: "remove files forever",
-    alias: "f",
+    desc: 'remove files forever',
+    alias: 'f',
   },
 }
 

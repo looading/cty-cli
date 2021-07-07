@@ -1,14 +1,14 @@
-import chalk from "chalk";
-import clipboard from "clipboardy"
-import os from "os"
+import chalk from 'chalk'
+import clipboard from 'clipboardy'
+import os from 'os'
 
 export function getIPv4() {
   const networks = os.networkInterfaces()
   if (networks.en0) {
-    const network = networks.en0.filter((network) => network.family === "IPv4").map((network) => network.address)
-    return !network.length ? "" : network[0]
+    const network = networks.en0.filter((network) => network.family === 'IPv4').map((network) => network.address)
+    return !network.length ? '' : network[0]
   } else {
-    return ""
+    return ''
   }
 }
 
