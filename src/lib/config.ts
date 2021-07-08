@@ -9,6 +9,7 @@ export type TConfigPlugin = string | IPlugin<any>
 
 export interface IConfig {
   plugins: TConfigPlugin[]
+  configs?: Record<string, Record<string, any>>
 }
 
 export const getConfig = (): {

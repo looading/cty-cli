@@ -24,8 +24,8 @@ type ICommands<ICommandArgv extends Record<string, Record<string, any>>> = {
 export interface IPlugin<ICommandArgv extends Record<string, Record<string, any>>> {
   name: string
   registerCommands(): ICommands<ICommandArgv>
-
   verifyConfigArgv?: (argv: any) => Partial<ICommandArgv>
+  getConfig?: <R extends Record<string, any>>() => R
 }
 
 export const checkPlugin = plugin => {
@@ -75,6 +75,8 @@ export const loadPlugins = () => {
     if (plugins.find(p => p.name === mod.name)) {
       return error('plugin already loaded', mod.name)
     }
+
+    mod.getConfig = () => config.data?.configs?.[mod.name] ?? {} as any
 
     plugins.push(mod)
   })
